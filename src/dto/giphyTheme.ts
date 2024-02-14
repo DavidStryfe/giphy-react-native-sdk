@@ -103,12 +103,12 @@ export function serializeTheme(theme: GiphyTheme | GiphyThemePreset): NativeGiph
     };
   }
 
-  const rv: Partial<NativeGiphyTheme> = { ...theme };
+  const rv: NativeGiphyTheme = { ...theme };
   THEME_COLOR_FIELDS.forEach((colorField) => {
     if (colorField in theme) {
       rv[colorField] = processColor(theme[colorField]);
     }
   });
 
-  return rv as NativeGiphyTheme;
+  return rv;
 }
