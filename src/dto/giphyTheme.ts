@@ -62,7 +62,9 @@ export interface NativeGiphyTheme {
   retryButtonTextColor?: NativeColorValue
 }
 
-const THEME_COLOR_FIELDS: NativeGiphyTheme[] = [
+type ThemeColorField = keyof NativeGiphyTheme;
+
+const THEME_COLOR_FIELDS: ThemeColorField[] = [
   'avatarPlaceholderColor',
   'backgroundColor',
   'backgroundColorForLoadingCells',
@@ -88,7 +90,7 @@ const THEME_COLOR_FIELDS: NativeGiphyTheme[] = [
   'tabBarSwitchDefaultColor',
   'tabBarSwitchSelectedColor',
   'usernameColor',
-]
+];
 
 type ChangeThemeColorType<T> = {
   [P in keyof T]: P extends (typeof THEME_COLOR_FIELDS)[number] ? ColorValue : T[P]
