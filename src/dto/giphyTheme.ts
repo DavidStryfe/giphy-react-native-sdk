@@ -88,7 +88,7 @@ const THEME_COLOR_FIELDS = [
   'tabBarSwitchDefaultColor',
   'tabBarSwitchSelectedColor',
   'usernameColor',
-] satisfies (keyof NativeGiphyTheme)[]
+]
 
 type ChangeThemeColorType<T> = {
   [P in keyof T]: P extends (typeof THEME_COLOR_FIELDS)[number] ? ColorValue : T[P]
