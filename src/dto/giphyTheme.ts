@@ -62,7 +62,7 @@ export interface NativeGiphyTheme {
   retryButtonTextColor?: NativeColorValue
 }
 
-const THEME_COLOR_FIELDS = [
+const THEME_COLOR_FIELDS: NativeGiphyTheme[] = [
   'avatarPlaceholderColor',
   'backgroundColor',
   'backgroundColorForLoadingCells',
