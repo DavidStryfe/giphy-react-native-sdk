@@ -106,7 +106,7 @@ export function serializeTheme(theme: GiphyTheme | GiphyThemePreset): NativeGiph
   const rv = { ...theme } as NativeGiphyTheme
   THEME_COLOR_FIELDS.forEach((colorField) => {
     if (colorField in rv) {
-      rv[colorField] = processColor(theme[colorField]) != null ? processColor(theme[colorField]) : undefined;
+      rv[colorField] = undefined;
     }
   })
 
